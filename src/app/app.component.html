@@ -1,0 +1,72 @@
+
+<div class="container">
+  <br/>
+  <div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-5 col-md-5">
+      <form [formGroup]="form">
+        <div class="form-group">
+          <input class="form-control" formControlName="command"  placeholder="Enter Your command">
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-3">
+      <button type="button" [disabled]="!form.valid" class="btn btn-primary" (click)="onSubmit()">
+        Send Command
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <br/>
+    <div class="col-lg-3 col-md-3">
+      <h2> <strong>BOT DETAILS:</strong> </h2>
+      <h3>COORDS (X,Y): ({{positionX}},{{positionY}})</h3>
+      <h3>Direction:</h3>
+      <h3>{{ positionGraus }}º - {{ positionDescription}}</h3>
+    </div>
+    <div class="col-lg-6 col-md-6 text-center">
+      <table class="table-bordered">
+        <tbody>
+          <tr>
+            <td><img *ngIf="p04" src="../assets/Bot.png">0,4</td>
+            <td><img *ngIf="p14" src="../assets/Bot.png">1,4</td>
+            <td><img *ngIf="p24" src="../assets/Bot.png">2,4</td>
+            <td><img *ngIf="p34" src="../assets/Bot.png">3,4</td>
+            <td><img *ngIf="p44" src="../assets/Bot.png">4,4</td>
+          </tr>
+          <tr>
+            <td><img *ngIf="p03" src="../assets/Bot.png">0,3</td>
+            <td><img *ngIf="p13" src="../assets/Bot.png">1,3</td>
+            <td><img *ngIf="p23" src="../assets/Bot.png">2,3</td>
+            <td><img *ngIf="p33" src="../assets/Bot.png">3,3</td>
+            <td><img *ngIf="p43" src="../assets/Bot.png">4,3</td>
+          </tr>
+          <tr>
+            <td><img *ngIf="p02" src="../assets/Bot.png">0,2</td>
+            <td><img *ngIf="p12" src="../assets/Bot.png">1,2</td>
+            <td><img *ngIf="p22" src="../assets/Bot.png">2,2</td>
+            <td><img *ngIf="p32" src="../assets/Bot.png">3,2</td>
+            <td><img *ngIf="p42" src="../assets/Bot.png">4,2</td>
+          </tr>
+          <tr>
+            <td><img *ngIf="p01" src="../assets/Bot.png">0,1</td>
+            <td><img *ngIf="p11" src="../assets/Bot.png">1,1</td>
+            <td><img *ngIf="p21" src="../assets/Bot.png">2,1</td>
+            <td><img *ngIf="p31" src="../assets/Bot.png">3,1</td>
+            <td><img *ngIf="p41" src="../assets/Bot.png">4,1</td>
+          </tr>
+          <tr>
+            <td><img *ngIf="p00" src="../assets/Bot.png">0,0</td>
+            <td><img *ngIf="p10" src="../assets/Bot.png">1,0</td>
+            <td><img *ngIf="p20" src="../assets/Bot.png">2,0</td>
+            <td><img *ngIf="p30" src="../assets/Bot.png">3,0</td>
+            <td><img *ngIf="p40" src="../assets/Bot.png">4,0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
